@@ -1,0 +1,66 @@
+/* ==UserStyle==
+@name           Youtube Custom Color Theme
+@namespace      boa
+@version        1.0.0
+@description    Changing YouTube's Main Color
+@author         boa
+==/UserStyle== */
+
+@-moz-document url-prefix("https://www.youtube.com") {
+  :root {
+        --theme: #9013fe;
+        --theme-radius: 10px;
+        --theme-time-radius: 10px;
+        --theme-radius-big: 20px;
+    }
+  
+    html:not(.style-scope)[dark],
+    :not(.style-scope)[dark],
+    html:not(.style-scope) {
+        --yt-spec-call-to-action: var(--theme) !important;
+        --yt-spec-brand-button-background: var(--theme) !important;
+        --yt-spec-static-brand-red: var(--theme) !important;
+        --yt-spec-brand-icon-inactive: var(--theme) !important;
+    }
+  
+    #text.ytd-channel-name,
+    yt-button-renderer.yt-formatted-string.yt-button-renderer,
+    paper-ripple,
+    a.yt-simple-endpoint.yt-formatted-string,
+    .style-scope.ytd-menu-renderer.force-icon-button.style-default-active,
+    .badge-style-type-live-now.ytd-badge-supported-renderer,
+    .badge-style-type-starting-soon.ytd-badge-supported-renderer {
+        border-color: var(--theme) !important;
+        color: var(--theme) !important;
+    }
+  
+    paper-ripple,
+    .ytp-swatch-color,
+    a.ytp-ce-link,
+    yt-icon.ytd-compact-link-renderer,
+    yt-icon.ytd-toggle-theme-compact-link-renderer {
+        color: var(--theme) !important;
+    }
+  
+    .ytp-swatch-background-color,
+    .ytp-settings-button.ytp-hd-quality-badge:after,
+    .ytp-chrome-controls .ytp-button[aria-pressed]:after,
+    .ytp-sb-subscribe,
+    a.ytp-sb-subscribe {
+        background-color: var(--theme) !important;
+    }
+  
+    a.yt-simple-endpoint.yt-formatted-string::selection,
+    span::selection,
+    yt-formatted-string::selection,
+    .ytp-menuitem[aria-checked=true] .ytp-menuitem-toggle-checkbox,
+    .ytp-volume-slider-handle,
+    .ytp-volume-slider-handle:before {
+        background: var(--theme) !important;
+    }
+  
+    .ytp-button:not([aria-disabled=true]):not([disabled]):not([aria-hidden=true]):hover > svg > path,
+    ytd-topbar-logo-renderer > a > div > yt-icon > svg > g > g > path {
+        fill: var(--theme) !important;
+    }
+  }
